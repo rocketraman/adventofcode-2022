@@ -4,7 +4,7 @@ A template repository providing a simple framework for [Advent of Code](https://
 
 ## Content
 
-After you create a new project based on the current template repository using the **Use this template** button,
+After you create a new project based on the current template repository using the [**Use this template**](https://github.com/mpetuska/template-advent-of-kotlin/generate) button,
 a bare minimal scaffold will appear in your GitHub account with the following structure:
 
 ```
