@@ -1,9 +1,9 @@
-package day9
+package day01
 
 import Day
 import Lines
 
-class Day9 : Day() {
+class Day1 : Day() {
     override fun part1(input: Lines): Long {
         TODO("Not yet solved")
     }
