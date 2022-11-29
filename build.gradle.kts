@@ -45,7 +45,7 @@ tasks {
             }
             violations.forEach {
                 it.writeText("")
-                logger.info("Cleaned input file ${it.absolutePath}")
+                logger.warn("Cleaned input file ${it.absolutePath}")
             }
         }
     }
