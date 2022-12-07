@@ -13,15 +13,8 @@ class Day6 : Day() {
   }
 
   private fun findMarker(input: Lines, size: Int): Int {
-    val windows = input.single()
+    return input.single()
       .windowed(size, partialWindows = true)
-      .withIndex()
-
-    for ((i, w) in windows) {
-      if (w.toSet().size == size) {
-        return i + size
-      }
-    }
-    error("No window found")
+      .indexOfFirst { it.toSet().size == size } + size
   }
 }
