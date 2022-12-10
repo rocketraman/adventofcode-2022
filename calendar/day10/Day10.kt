@@ -21,9 +21,12 @@ class Day10 : Day() {
     }
 
     val crt = crtPixels
-      .windowed(40, 40)
-      .joinToString("\n") { it.joinToString("") }
+      .chunked(40)
+      .joinToString("\n") {
+        it.joinToString("")
+      }
 
+    // avoid the first line offset in the harness output
     return "\n" + crt
   }
 
