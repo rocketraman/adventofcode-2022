@@ -29,7 +29,7 @@ class Day13 : Day() {
     }
   }
   data class IntegerPacket(val data: Int): Packet() {
-    fun asList() = ListPacket(mutableListOf(this))
+    fun asList() = ListPacket(listOf(this))
     override fun toString() = data.toString()
   }
   data class ListPacket(val data: List<Packet>): Packet() {
@@ -121,8 +121,8 @@ class Day13 : Day() {
   }
 
   override fun part2(input: Lines): Any {
-    val divider1 = ListPacket(mutableListOf(ListPacket(mutableListOf(IntegerPacket(2)))))
-    val divider2 = ListPacket(mutableListOf(ListPacket(mutableListOf(IntegerPacket(6)))))
+    val divider1 = ListPacket(listOf(ListPacket(listOf(IntegerPacket(2)))))
+    val divider2 = ListPacket(listOf(ListPacket(listOf(IntegerPacket(6)))))
 
     val packets = input
       .filterNot { it.isEmpty() }
