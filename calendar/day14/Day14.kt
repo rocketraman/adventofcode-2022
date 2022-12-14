@@ -100,9 +100,10 @@ class Day14 : Day() {
   }
 
   fun printCave(rockPoints: Set<Point>, sandPoints: Set<Point>) {
-    val minX = (rockPoints + sandPoints).minOf { it.x }
-    val maxX = (rockPoints + sandPoints).maxOf { it.x }
-    val maxY = (rockPoints + sandPoints).maxOf { it.y }
+    val allPoints = rockPoints + sandPoints
+    val minX = allPoints.minOf { it.x }
+    val maxX = allPoints.maxOf { it.x }
+    val maxY = allPoints.maxOf { it.y }
 
     for (y in 0..maxY) {
       for (x in minX..maxX) {
